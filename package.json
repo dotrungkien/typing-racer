@@ -1,0 +1,19 @@
+{
+  "name": "typing-racer",
+  "version": "1.0.0",
+  "description": "a type-racing game with crypto payout",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "fix-lint": "npm run lint -- --fix"
+  },
+  "author": "dotrungkien",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3",
+    "socket.io": "^2.2.0",
+    "txtgen": "^2.2.6"
+  }
+}
