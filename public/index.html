@@ -1,18 +1,74 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta name="viewport" content="minimal-ui, width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <head>
+    <meta
+      name="viewport"
+      content="minimal-ui, width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=0"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
-    <link rel="shortcut icon" type="image/png" href="https://pbs.twimg.com/profile_images/1168932795185586176/wvIE7fUn_400x400.jpg"/>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <meta charset="utf-8"/>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
 
-</head>
-<body>
-    <script>window.p5 = p5;</script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <div id="prepare">
+      <!-- <button class="btn btn-primary" id="btn-connect">
+        Connect wallet
+      </button> -->
+    </div>
+    <div id="connected" style="display: none;">
+      <div id="network">
+        <p>
+          <strong>Connected blockchain:</strong>
+          <span id="network-name"></span>
+        </p>
+
+        <p>
+          <strong>Selected account:</strong>
+          <span id="selected-account"></span>
+        </p>
+
+        <p>
+          <strong>Balance:</strong>
+          <span id="account-balance"></span>
+        </p>
+      </div>
+    </div>
+
+    <script>
+      window.p5 = p5;
+    </script>
+    <script src="https://unpkg.com/web3@latest/dist/web3.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/web3modal"></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/evm-chains/lib/index.js"
+    ></script>
     <script src="sketch.js" type="module" defer></script>
-</body>
+    <!-- <script type="text/javascript" src="./wallet.js"></script> -->
+  </body>
 </html>

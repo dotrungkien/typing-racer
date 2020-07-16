@@ -60,7 +60,7 @@ class GameEngine {
 
   restart() {
     console.log('restarting game now');
-    this.sentence = randomSentence();
+    this.sentence = txtgen.sentence();
     for (let i = 0; i < this.players.length; i++) {
       this.players[i].reset(this.sentence);
     }

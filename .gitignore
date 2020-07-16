@@ -102,3 +102,7 @@ dist
 
 # TernJS port file
 .tern-port
+
+web3config.js
+
+.DS_Store
