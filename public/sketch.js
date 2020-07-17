@@ -94,18 +94,16 @@ async function fetchAccountData() {
   console.log('Got accounts', accounts);
   selectedAccount = accounts[0];
 
-  const balance = web3.utils.fromWei(
-    await web3.eth.getBalance(selectedAccount)
+  let balance = parseFloat(
+    web3.utils.fromWei(await web3.eth.getBalance(selectedAccount))
   );
+  balance = Math.round((balance + Number.EPSILON) * 100) / 100;
 
   document.querySelector('#selected-account').textContent = selectedAccount;
   document.querySelector('#account-balance').textContent = balance + ' ETH';
-
-  // document.querySelector('#connected').style.display = 'block';
 }
 
 async function refreshAccountData() {
-  // document.querySelector('#connected').style.display = 'none';
   await fetchAccountData(provider);
 }
 
