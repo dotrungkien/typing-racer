@@ -99,15 +99,13 @@ async function fetchAccountData() {
   );
 
   document.querySelector('#selected-account').textContent = selectedAccount;
-  document.querySelector('#account-balance').textContent = balance;
+  document.querySelector('#account-balance').textContent = balance + ' ETH';
 
-  document.querySelector('#prepare').style.display = 'none';
-  document.querySelector('#connected').style.display = 'block';
+  // document.querySelector('#connected').style.display = 'block';
 }
 
 async function refreshAccountData() {
-  document.querySelector('#connected').style.display = 'none';
-  document.querySelector('#prepare').style.display = 'block';
+  // document.querySelector('#connected').style.display = 'none';
   await fetchAccountData(provider);
 }
 
@@ -149,7 +147,6 @@ async function onDisconnect() {
 
   selectedAccount = null;
 
-  document.querySelector('#prepare').style.display = 'block';
   document.querySelector('#connected').style.display = 'none';
 }
 

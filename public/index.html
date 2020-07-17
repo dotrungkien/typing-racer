@@ -35,30 +35,26 @@
     <meta charset="utf-8" />
   </head>
   <body>
-    <div id="prepare">
-      <!-- <button class="btn btn-primary" id="btn-connect">
-        Connect wallet
-      </button> -->
-    </div>
-    <div id="connected" style="display: none;">
-      <div id="network">
-        <p>
-          <strong>Connected blockchain:</strong>
-          <span id="network-name"></span>
-        </p>
-
-        <p>
-          <strong>Selected account:</strong>
-          <span id="selected-account"></span>
-        </p>
-
-        <p>
-          <strong>Balance:</strong>
-          <span id="account-balance"></span>
-        </p>
-      </div>
-    </div>
-
+    <nav
+      class="nav nav-pills nav-fill p-2"
+      style="background-color: #e3f2fd;"
+      id="connected"
+    >
+      <img src="/icon.png" width="40" height="40" alt="" />
+      <h4 class="pt-1">Typing Master</h4>
+      <p class="nav-item pt-2">
+        <strong>Network:</strong>
+        <span id="network-name"></span>
+      </p>
+      <p class="nav-item pt-2">
+        <strong>Account:</strong>
+        <span id="selected-account"></span>
+      </p>
+      <p class="nav-item pt-2">
+        <strong>Balance:</strong>
+        <span id="account-balance"></span>
+      </p>
+    </nav>
     <script>
       window.p5 = p5;
     </script>
