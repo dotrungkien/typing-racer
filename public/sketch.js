@@ -58,8 +58,11 @@ function registerSocketHandlers() {
   });
   socket.on('winner', winner => {
     if (winner == socket.id) {
+      $('#winner-modal').modal('show');
       console.log('You are the winner, claim 0.01ETH');
-      socket.emit('claimReward', { address: selectedAccount });
+      $('#claim-reward-btn').click(() => {
+        socket.emit('claimReward', { address: selectedAccount });
+      });
     }
   });
   socket.on('claimSuccess', ({ address, tx }) => {
