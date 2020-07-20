@@ -62,7 +62,7 @@ function registerSocketHandlers() {
       console.log('You are the winner, claim 0.01ETH');
       $('#claim-reward-btn').click(() => {
         socket.emit('claimReward', { address: selectedAccount });
-        toastr.info('Claim transaction sent!');
+        toastr.success('Claim transaction sent!');
       });
     }
   });

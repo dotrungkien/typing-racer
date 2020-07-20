@@ -18,7 +18,7 @@ export default class Terminal {
     this.drawTerminal();
     this.displayPath();
     this.drawSentence();
-    this.drawCursor();
+    // this.drawCursor();
   }
 
   resize() {
@@ -80,7 +80,7 @@ export default class Terminal {
 
     if (this.sentence) {
       fill(255, 255, 255);
-      text(this.sentence, 190 + textWidth(pathFull), this.y + 50);
+      text(this.sentence, 200 + textWidth(pathFull), this.y + 30, 900, 400);
 
       if (
         this.wrongLetter &&
@@ -89,15 +89,19 @@ export default class Terminal {
         fill(255, 100, 100);
         text(
           this.sentence.substring(0, this.currentIndex + 1),
-          190 + textWidth(pathFull),
-          this.y + 50
+          200 + textWidth(pathFull),
+          this.y + 30,
+          900,
+          400
         );
       }
       fill(100, 255, 100);
       text(
         this.sentence.substring(0, this.currentIndex),
-        190 + textWidth(pathFull),
-        this.y + 50
+        200 + textWidth(pathFull),
+        this.y + 30,
+        900,
+        400
       );
     }
   }
@@ -114,7 +118,7 @@ export default class Terminal {
           this.sentence.substring(0, this.currentIndex)
         );
         const cursorX =
-          190 +
+          200 +
           textWidth(pathFull) +
           currentSentenceWidth +
           (currentCharWidth - this.cursorWidth) / 2;

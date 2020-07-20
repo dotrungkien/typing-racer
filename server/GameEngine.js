@@ -20,7 +20,7 @@ class GameEngine {
   }
 
   removePlayer(id) {
-    this.players = this.players.filter((player) => player.id !== id);
+    this.players = this.players.filter(player => player.id !== id);
   }
 
   correctKeyPressed(key, id) {
@@ -39,7 +39,7 @@ class GameEngine {
 
   updatePlayers() {
     if (this.winner) return;
-    this.players.forEach((player) => {
+    this.players.forEach(player => {
       this.findWinner(player);
     });
   }
@@ -47,7 +47,7 @@ class GameEngine {
   findWinner(player) {
     if (player.hasFinished()) {
       player.finished = true;
-      const playerFinishCount = this.players.filter((p) => p.finished).length;
+      const playerFinishCount = this.players.filter(p => p.finished).length;
       if (playerFinishCount === 1) {
         player.winner = true;
         this.winner = player;
@@ -60,7 +60,7 @@ class GameEngine {
 
   restart() {
     console.log('restarting game now');
-    this.sentence = txtgen.sentence();
+    this.sentence = txtgen.paragraph();
     for (let i = 0; i < this.players.length; i++) {
       this.players[i].reset(this.sentence);
     }
