@@ -1,3 +1,5 @@
+const MAX_WIDTH = 1000;
+const MAX_HEIGHT = 500;
 export default class Terminal {
   constructor() {
     this.x = 0;
@@ -80,7 +82,13 @@ export default class Terminal {
 
     if (this.sentence) {
       fill(255, 255, 255);
-      text(this.sentence, 200 + textWidth(pathFull), this.y + 30, 900, 400);
+      text(
+        this.sentence,
+        200 + textWidth(pathFull),
+        this.y + 30,
+        MAX_WIDTH,
+        MAX_HEIGHT
+      );
 
       if (
         this.wrongLetter &&
@@ -91,8 +99,8 @@ export default class Terminal {
           this.sentence.substring(0, this.currentIndex + 1),
           200 + textWidth(pathFull),
           this.y + 30,
-          900,
-          400
+          MAX_WIDTH,
+          MAX_HEIGHT
         );
       }
       fill(100, 255, 100);
@@ -100,8 +108,8 @@ export default class Terminal {
         this.sentence.substring(0, this.currentIndex),
         200 + textWidth(pathFull),
         this.y + 30,
-        900,
-        400
+        MAX_WIDTH,
+        MAX_HEIGHT
       );
     }
   }
@@ -117,14 +125,16 @@ export default class Terminal {
         const currentSentenceWidth = textWidth(
           this.sentence.substring(0, this.currentIndex)
         );
+
         const cursorX =
           200 +
           textWidth(pathFull) +
-          currentSentenceWidth +
+          (currentSentenceWidth % MAX_WIDTH) +
           (currentCharWidth - this.cursorWidth) / 2;
 
+        const cursorY = this.y + 50 + 8;
         fill(100, 255, 100);
-        rect(cursorX, this.y + 50 + 8, this.cursorWidth, this.cursorHeight);
+        rect(cursorX, cursorY, this.cursorWidth, this.cursorHeight);
       }
     }
   }

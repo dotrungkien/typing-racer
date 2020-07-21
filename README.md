@@ -10,9 +10,17 @@
 
 ## How to use
 
-1. `npm install` in the root directory
-2. `npm start` to get it running!
-3. Navigate to [http://localhost:40000](http://localhost:4000)
+1. Go to `/server/ and setup your INFURA url and web3 private key of payment account.
+2. `yarn install` in the root directory.
+3. `yarn start` to get it running!
+4. Navigate to [http://localhost:40000](http://localhost:4000)
+
+## Techtree
+
+- [p5\*js](https://p5js.org/) for creating game.
+- [web3modal](https://github.com/Web3Modal/web3modal) for web3 login.
+- [socket.io](https://socket.io/) for multiplayer connection.
+- [ethereumjs](https://github.com/ethereumjs/ethereumjs-util) for send transaction.
 
 ## How to contribute
 
@@ -24,6 +32,14 @@
 
 ## How it looks
 
-### Initial commit (It looks better now 😁)
+![demo](demo.gif)
 
-![gif of the current state](https://user-images.githubusercontent.com/12545967/66150335-d6d83380-e60c-11e9-9aa7-6b5d86866cd8.gif)
+## Future work
+
+- Handle multiplayer more smoothly by adding lobby and room.
+- Player can bet on typing competition.
+- More typing mode (multi-language, code).
+
+## Licence
+
+MIT
