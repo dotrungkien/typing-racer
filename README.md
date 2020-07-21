@@ -8,6 +8,10 @@
 
 <h4 align="center">A type-racing game with crypto payout!</h4>
 
+## Live Demo
+
+[typingracer.dotgrid.pro](http://typingracer.dotgrid.pro)
+
 ## How to use
 
 1. Go to `/server/ and setup your INFURA url and web3 private key of payment account.
