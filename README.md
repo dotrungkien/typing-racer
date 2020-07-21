@@ -14,10 +14,10 @@
 
 ## How to use
 
-1. Go to `/server/ and setup your INFURA url and web3 private key of payment account.
+1. Go to `/server/` and setup your INFURA url and web3 private key of payment account.
 2. `yarn install` in the root directory.
 3. `yarn start` to get it running!
-4. Navigate to [http://localhost:40000](http://localhost:4000)
+4. Navigate to [http://localhost:4000](http://localhost:4000)
 
 ## Techtree
 
