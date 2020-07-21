@@ -8,7 +8,7 @@
 
 <h4 align="center">A type-racing game with crypto payout!</h4>
 
-## Live Demo
+## Live Demo (Ropsten Network)
 
 [typingracer.dotgrid.pro](http://typingracer.dotgrid.pro)
 
