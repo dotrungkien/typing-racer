@@ -15,7 +15,7 @@
     "ethereumjs-util": "^7.0.3",
     "ethjs-query": "^0.3.8",
     "express": "^4.16.3",
-    "socket.io": "^2.2.0",
+    "socket.io": "^2.4.0",
     "txtgen": "^2.2.6",
     "web3-provider-engine": "^15.0.12"
   }
